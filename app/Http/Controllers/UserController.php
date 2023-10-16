@@ -11,7 +11,7 @@ class UserController extends Controller
 {
     public function showLoginForm()
     {
-        return view('login'); // Replace 'auth.login' with the correct view path
+        return view('login'); 
     }
 
     public function login(Request $request)
@@ -29,9 +29,6 @@ class UserController extends Controller
             return redirect()->route('user.userHomepage');
         }
 
-        
-
-        // Authentication failed, redirect back with an error
         return redirect()->back()->with('error', 'Invalid credentials');
     }
 
